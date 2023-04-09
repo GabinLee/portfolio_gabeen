@@ -69,7 +69,7 @@ export const Container = styled.div`
       &.intro {
         min-height: 80vh;
         padding:  80px;
-        background: url(/images/bg1.jpg) no-repeat center center / cover;
+        background: url(images/intro_bg.jpg) no-repeat center center / cover;
         display: flex;
         align-items: center;
         justify-content: center;

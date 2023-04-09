@@ -27,7 +27,7 @@ export default function MainPage() {
     <Container className={`${isScroll ? 'scroll' : ''}`}>
       <header>
         <div className="inner">
-          <img src="/images/Gabeen.png" alt="가빈" />
+          <img src="images/gabeen.png" alt="가빈" />
         </div>
       </header>
 
