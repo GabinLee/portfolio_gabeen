@@ -46,6 +46,7 @@ export const Container = styled.div`
         text-align: center;
         span{
           padding: 6px 0;
+          font-size: 20px;
           display: inline-block;
           position: relative;
 
@@ -165,9 +166,6 @@ export const Container = styled.div`
 
               &_description {
                 padding: 20px;
-                .title{
-                  flex: 1;
-                }
 
                 .info{
                   margin: 4px 0 6px;
@@ -327,25 +325,60 @@ export const Container = styled.div`
       }
 
       section{
+        .section_title span{ font-size: 18px; }
         &.intro{
           padding: 120px 60px 80px;
           .card{
             padding: 12px;
+            .profile_txt{
+              p{
+                font-size: 16px;
+              }
+              a{
+                font-size: 12px;
+                background-size: 14px 14px !important;
+              }
+              br{
+                display: none;
+              }
+            }
           }
         }
         &.project{
           .project_list{
             > li{
               width: 100%;
+              .card_description{
+                .info{
+                  margin: 4px 0 4px;
+                  font-size: 12px;
+                }
+                .period{
+                  font-size: 11px;
+                }
+                .use_skill_list{
+                  > li .badge{
+                    img{
+                      max-width: 20px;
+                      max-height: 12px;
+                    }
+                    span{
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
             }
           }
         }
 
         &.career{
           padding: 60px 24px;
+          ul li p{
+            font-size: 12px;
+          }
         }
       }
     }
-
   }
 `;
