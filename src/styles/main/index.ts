@@ -121,13 +121,13 @@ export const Container = styled.div`
                   margin-top: 12px;
                 }
                 &.mail{
-                  background: url(/images/icon/mail_blue.png) no-repeat left 0.5px center / 16px 16px;
+                  background: url(images/icon/mail_blue.png) no-repeat left 0.5px center / 16px 16px;
                 }
                 &.tel{
-                  background: url(/images/icon/tel_blue.png) no-repeat left center / 17px 17px;
+                  background: url(images/icon/tel_blue.png) no-repeat left center / 17px 17px;
                 }
                 &.git{
-                  background: url(/images/icon/git_blue.png) no-repeat left center / 17px 17px;
+                  background: url(images/icon/git_blue.png) no-repeat left center / 17px 17px;
                 }
               }
             }
