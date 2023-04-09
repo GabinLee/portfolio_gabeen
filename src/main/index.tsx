@@ -40,7 +40,7 @@ export default function MainPage() {
             <div className="profile_txt">
               <p>프론트엔드 개발자로 성장을 준비하는<br /> 퍼블리셔 <span>이가빈</span>입니다.</p>
               <a href="mailto:leegb0621@gmail.com" className='mail'>leegb0621@gmail.com</a>
-              <a href="tel:010-0000-000" className='tel'>010-0000-0000</a>
+              <a href="tel:010-2790-5747" className='tel'>010-2790-5747</a>
               <a href='https://github.com/GabinLee' className='git'>https://github.com/GabinLee</a>
             </div>
           </div>

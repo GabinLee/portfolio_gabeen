@@ -3,13 +3,6 @@
 // #4675C0  #8FC8EB  #B1BEF2
 
 :root{
-  // --main: #5874dc;
-  // --main: #294884;
-  // --main: #3c5a8c;
-  // --main_light: #d9e1ef;
-
-  // --red: #e40000;
-
   --white: #fff;
   --gray_f023: #f0f2f3;
   --gray_e: #eee;
@@ -17,11 +10,6 @@
   --black: #222;
 
   --blue: #4675c0;
-
-  // --font12: 12px;
-  // --font13: 13px;
-  // --font14: 14px;
-  // --font16: 16px;
 }
 
 * {
@@ -32,18 +20,18 @@
     outline: none;
   }
 }
-// ::-webkit-scrollbar{
-//   width: 10px;
-//   height: 10px;
-// }
-// ::-webkit-scrollbar-track{
-//   background: var(--gray_e5);
-//   border-radius: 10px;
-// }
-// ::-webkit-scrollbar-thumb{
-//   background: var(--blue);
-//   border-radius: 10px;
-// }
+::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track{
+  background: var(--gray_e5);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--blue);
+  border-radius: 6px;
+}
 
 body{
   min-width: 320px;

@@ -201,6 +201,7 @@ export const Container = styled.div`
                       }
                       span{
                         font-size: 13px;
+                        text-transform: capitalize;
                       }
                     }
                   }
@@ -236,10 +237,10 @@ export const Container = styled.div`
                   }
 
                   &.page .ic{
-                    mask: url(/images/homepage.png) no-repeat center center / cover;
+                    mask: url(images/homepage.png) no-repeat center center / cover;
                   }
                   &.git .ic{
-                    mask: url(/images/github.png) no-repeat center center / cover;
+                    mask: url(images/github.png) no-repeat center center / cover;
                   }
 
                   
