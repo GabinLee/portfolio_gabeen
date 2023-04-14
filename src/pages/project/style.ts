@@ -419,13 +419,16 @@ export const CareerDescriptionViewContainer = styled.ul`
       .top{
         display: block;
         &::before{
-          top: 6.5px;
+          top: 7px;
           left: -23.5px;
         }
         .left{
           margin-bottom: 6px;
           text-align: left;
           font-size: 12px;
+        }
+        .title{
+          font-size: 15px;
         }
         .info{
           font-size: 12px;
