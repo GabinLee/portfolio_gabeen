@@ -57,14 +57,6 @@ export const Container = styled.section`
           transform: translate(0, -50%);
           transition: height .25s;
         }
-        &:not(.active):hover{
-          &::before{
-            height: 100%;
-          }
-          h1{
-            -webkit-text-fill-color: white;
-          }
-        }
 
         h1{
           padding: 8px 0;
@@ -103,6 +95,19 @@ export const Container = styled.section`
     .area.menu button{
       + button{
         margin-left: 36px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    .area.menu{
+      button:not(.active):hover{
+        &::before{
+          height: 100%;
+        }
+        h1{
+          -webkit-text-fill-color: white;
+        }
       }
     }
   }
