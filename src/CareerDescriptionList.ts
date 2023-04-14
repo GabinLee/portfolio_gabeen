@@ -37,6 +37,7 @@ export const CareerDescriptionList: CareerDescriptionProps[] = [
     tag: ['Web'],
     img: 'images/project/paybill.png',
     participation: [{name: 'plan', percentage: '40%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}],
+    cont: ['Axios를 이용해 API를 호출하여 리스트 생성, 수정, 삭제 관리'],
     skills: ['react', 'SCSS', 'HTML5']
   },
   {title: '인더스팟',

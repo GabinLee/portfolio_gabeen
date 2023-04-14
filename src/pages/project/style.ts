@@ -228,7 +228,7 @@ export const CareerDescriptionViewContainer = styled.ul`
   li.career_item{
     position: relative;
     + li{
-      margin-top: 12px;
+      margin-top: 36px;
     }
     &::before{
       content: '';
@@ -240,12 +240,12 @@ export const CareerDescriptionViewContainer = styled.ul`
       bottom: 0;
     }
     &:not(:first-child):not(:last-child)::before{
-      height: calc(100% + 12px);
-      top: -12px;
+      height: calc(100% + 36px);
+      top: -36px;
     }
     &:last-child::before{
-      height: 46px;
-      top: -12px;
+      height: 70px;
+      top: -36px;
     }
     
     > div{  // top, bottom
@@ -273,6 +273,8 @@ export const CareerDescriptionViewContainer = styled.ul`
       .right{
         .title{
           white-space: nowrap;
+          color: var(--blue);
+          font-weight: bold;
         }
       }
     }
