@@ -235,6 +235,13 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    header{
+      height: 60px;
+      img{
+        height: 24px;
+      }
+    }
+
     main{
       .inner {
         padding: 120px 24px;
