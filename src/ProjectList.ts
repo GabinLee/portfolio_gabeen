@@ -1,4 +1,4 @@
-export type Project = {
+export type ProjectProps = {
   title: string
   info?: string
   period: string
@@ -8,7 +8,7 @@ export type Project = {
   skills: string[]
 }
 
-export const ProjectList: Project[] = [
+export const ProjectList: ProjectProps[] = [
   // {title: '셀러가드', info: '셀러 안심 서비스 및 관리자 페이지', period: '2022.03 ~ 2022.04', img: '',
   //   skills: ['react', 'TypeScript', 'SCSS', 'HTML5']
   // },
@@ -36,9 +36,9 @@ export const ProjectList: Project[] = [
   {title: 'Save', info: '관리자 페이지', period: '2022.01 ~ 2022.04', img: 'images/project/save.png',
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5']
   },
-  {title: '조우네트웍스', info: '회사 홈페이지', period: '2021.11 ~ 2021.12', img: 'images/project/jowoonetworks.png',
-    skills: ['CSS3', 'HTML5']
-  },
+  // {title: '조우네트웍스', info: '회사 홈페이지', period: '2021.11 ~ 2021.12', img: 'images/project/jowoonetworks.png',
+  //   skills: ['CSS3', 'HTML5']
+  // },
   {title: '고르프', info: '골프 레슨•예약 앱', period: '2021.09 ~ 2022.11', img: 'images/project/golf.png',
     skills: ['CSS3', 'HTML5']
   },
