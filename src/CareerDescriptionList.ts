@@ -36,7 +36,7 @@ export const CareerDescriptionList: CareerDescriptionProps[] = [
     info: '배송 및 재고 관리 프로그램',
     tag: ['Web'],
     img: 'images/project/paybill.png',
-    participation: [{name: 'plan', percentage: '40%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}],
+    participation: [{name: 'plan', percentage: '40%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '20%'}],
     cont: ['Axios를 이용해 API를 호출하여 리스트 생성, 수정, 삭제 관리'],
     skills: ['react', 'SCSS', 'HTML5']
   },
@@ -52,7 +52,7 @@ export const CareerDescriptionList: CareerDescriptionProps[] = [
     period: '2022.07 ~ 2022.08',
     info: '입점형 쇼핑몰',
     tag: ['Web', 'Mobile', '적응형'],
-    cont: ['header, footer, 메인 페이지 퍼블리싱 수정'],
+    cont: ['카페24 솔루션을 이용한 쇼핑몰의 header, footer, 메인 페이지 퍼블리싱 수정'],
     skills: ['CSS3', 'HTML5']
   },
   {title: '파인스페이스',

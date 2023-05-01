@@ -23,6 +23,7 @@ export default function ParticipationView(props: ParticipationProps) {
           {(props.name === 'plan') && '기획'}
           {(props.name === 'design') && '디자인'}
           {(props.name === 'publisher') && '퍼블리싱'}
+          {(props.name === 'front-end') && '프론트엔드'}
         </span>
         <span>{props.percentage}</span>
       </div>
@@ -31,9 +32,8 @@ export default function ParticipationView(props: ParticipationProps) {
 }
 
 const ParticipationItem = styled.li<StyledProps>`
-  padding: 4px 12px;
   div{
-    width: 180px;
+    min-width: 134px;
     height: 22px;
     padding: 0 16px;
     border-radius: 12px;
@@ -66,5 +66,24 @@ const ParticipationItem = styled.li<StyledProps>`
 
   &.publisher div::before{
     background-color: #e2f3e6;
+  }
+
+  &.front-end div::before{
+    background-color: #d1e3f6;
+  }
+
+  @media screen and (min-width: 501px) {
+    padding: 4px 12px;
+    div{
+      width: 180px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 4px 6px;
+  }
+
+  @media screen and (max-width: 390px) {
+    flex: 1;
   }
 `

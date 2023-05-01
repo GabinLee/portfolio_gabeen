@@ -281,13 +281,23 @@ export const CareerDescriptionViewContainer = styled.ul`
 
     .bottom{
       .left{
-        img{
-          width: 160px;
+        button{
+          padding: 0;
+          border: none;
+          background-color: transparent;
           display: block;
         }
+        img{
+          width: 160px;
+        }
       }
+
       .right{
         .list{
+          &.participation{
+            font-size: 13px;
+          }
+
           &.info{
             margin: -3px -6px;
             font-size: 14px;
@@ -297,13 +307,6 @@ export const CareerDescriptionViewContainer = styled.ul`
               padding: 3px 6px;
               white-space: nowrap;
             }
-          }
-
-          &.participation{
-            margin: 8px -12px 0;
-            font-size: 13px;
-            display: flex;
-            flex-wrap: wrap;
           }
 
           &.cont{
@@ -357,6 +360,16 @@ export const CareerDescriptionViewContainer = styled.ul`
           }
         }
       }
+
+      .bottom{
+        .right{
+          display: flex;
+          > div{
+            flex: 1;
+            padding-right: 12px;
+          }
+        }
+      }
     }
   }
 
@@ -377,6 +390,15 @@ export const CareerDescriptionViewContainer = styled.ul`
         .right{
           .title{
             margin-bottom: 4px;
+          }
+        }
+      }
+
+      .bottom{
+        .right{
+          .list.participation{
+            display: flex;
+            flex-wrap: wrap;
           }
         }
       }
@@ -408,15 +430,20 @@ export const CareerDescriptionViewContainer = styled.ul`
       .bottom{
         .left{
           padding-right: 18px;
-          img{
+          button{
             margin-left: auto;
+          }
+        }
+        .right{
+          .list.participation{
+            margin: 8px -12px 0;
           }
         }
       }
     }
   }
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     li.career_item{
       padding: 24px 24px 24px 48px;
       &::before{
@@ -447,8 +474,13 @@ export const CareerDescriptionViewContainer = styled.ul`
         .left{
           width: 100%;
           padding-right: 24px;
-          img{
+          button{
             margin: 12px auto 0 auto;
+          }
+        }
+        .right{
+          .list.participation{
+            margin: 8px -6px 0;
           }
         }
       }
