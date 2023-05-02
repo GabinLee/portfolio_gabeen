@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { CareerDescriptionViewContainer } from "./style";
-import { CareerDescriptionProps, CareerDescriptionList } from "../../CareerDescriptionList";
+import { CareerDescription, CareerDescriptionList } from "../../CareerDescriptionList";
 import ParticipationView from "../../component/Participation.view";
 
 
 export default function CareerDescriptionListView() {
-  const [CareerDescription] = useState<CareerDescriptionProps[]>(CareerDescriptionList)
+  const [CareerDescription] = useState<CareerDescription[]>(CareerDescriptionList)
 
   const [showImgModal, setShowImgModal] = useState(false)
   const [selectedImg, setSelectedImg] = useState('')
@@ -25,6 +25,17 @@ export default function CareerDescriptionListView() {
               <div className="right">
                 <p className="title">{item.title}</p>
                 <p className="info">{item.info}</p>
+                {item.link && (
+                  <a href={item.link} target="_blank" className="link" rel="noreferrer">
+                    <p className="ic" />
+                    <p className='text'>
+                      <span>P</span>
+                      <span>a</span>
+                      <span>g</span>
+                      <span>e</span>
+                    </p>
+                    </a>
+                )}
               </div>
             </div>
 
@@ -61,7 +72,13 @@ export default function CareerDescriptionListView() {
                     {item.skills.map((skillItem, sIndex) => (
                       <li key={`skillItem${index}${sIndex}`}>
                         <div className="badge">
-                          {skillItem !== 'SCSS' && (
+                          {skillItem === 'HTML5' && (
+                            <img src={`images/skill/html.png`} alt={skillItem} />
+                          )}
+                          {skillItem === 'CSS3' && (
+                            <img src={`images/skill/css.png`} alt={skillItem} />
+                          )}
+                          {(skillItem !== 'HTML5' && skillItem !== 'CSS3') && (
                             <img src={`images/skill/${skillItem}.png`} alt={skillItem} />
                           )}
                           <span>{skillItem}</span>

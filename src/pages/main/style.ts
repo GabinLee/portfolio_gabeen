@@ -68,7 +68,7 @@ export const Container = styled.div`
         }
       }
       
-      &.intro {
+      &.intro{
         min-height: 80vh;
         padding:  80px;
         background: url(images/intro_bg.jpg) no-repeat center center / cover;
@@ -189,6 +189,53 @@ export const Container = styled.div`
             }
             100%{
               background-position-x: 1000px;
+            }
+          }
+        }
+      }
+
+      &.skills{
+        ul{
+          display: flex;
+          justify-content: center;
+          &:nth-of-type(1){
+            margin: -6px -6px 0;
+          }
+          &:nth-of-type(2){
+            margin: 6px -6px -6px;
+          }
+          li{
+            padding: 6px;
+            p{
+              height: 30px;
+              line-height: 30px;
+              border-radius: 15px;
+              padding: 0 15px 0 40px;
+              &.html{
+                background: #e2f3e6 url(images/skill/html.png) no-repeat left 15px center / auto 16px;
+              }
+              &.css{
+                background: #e2f3e6 url(images/skill/css.png) no-repeat left 15px center / auto 16px;
+              }
+              &.react{
+                background: #e2f3e6 url(images/skill/react.png) no-repeat left 15px center / auto 16px;
+              }
+              &.javascript{
+                background: #e2f3e6 url(images/skill/javascript.png) no-repeat left 15px center / auto 16px;
+              }
+              &.typescript{
+                background: #e2f3e6 url(images/skill/typescript.png) no-repeat left 15px center / auto 16px;
+              }
+
+              &.xd{
+                background: #fff7d5 url(images/skill/xd.png) no-repeat left 15px center / auto 16px;
+              }
+              &.figma{
+                background: #fff7d5 url(images/skill/figma.png) no-repeat left 15px center / auto 16px;
+              }
+              &.git{
+                background: #ffebeb url(images/skill/github.png) no-repeat left 15px center / auto 16px;
+              }
             }
           }
         }

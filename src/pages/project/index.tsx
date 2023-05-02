@@ -15,21 +15,21 @@ export default function ProjectView() {
           <button className={activeMenu === 0 ? 'active' : '' }
             onClick={e => setActiveMenu(0)}
           >
-            <h1>Project</h1>
+            <h1>Career Description</h1>
           </button>
           <button className={activeMenu === 1 ? 'active' : ''}
             onClick={e => setActiveMenu(1)}
           >
-            <h1>Career Description</h1>
+            <h1>Portfolio</h1>
           </button>
         </div>
         
         {(activeMenu === 0) && (
-          <ProjectListView />
+          <CareerDescriptionListView />
         )}
         
         {(activeMenu === 1) && (
-          <CareerDescriptionListView />
+          <ProjectListView />
         )}
       </div>
 

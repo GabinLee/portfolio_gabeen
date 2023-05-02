@@ -113,116 +113,6 @@ export const Container = styled.section`
   }
 `
 
-export const ProjectViewContainer = styled.ul`
-  margin: -24px;
-  display: flex;
-  flex-wrap: wrap;
-  > li {
-    width: calc(100% * 1 / 3);
-    padding: 24px;
-    .card {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      &_img {
-        height: 200px;
-        padding: 12px 0;
-        background: var(--gray_f023);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          max-width: 100%;
-          max-height: 100%;
-        }
-      }
-
-      &_description {
-        padding: 20px;
-
-        .info{
-          margin: 4px 0 6px;
-          font-size: 14px;
-        }
-        
-        .period{
-          color: var(--gray_5);
-          font-size: 13px;
-          line-height: 21px;
-        }
-      }
-
-      &_link{
-        margin-top: auto;
-        border-top: 1px solid var(--gray_e);
-        display: flex;
-        a{
-          height: 46px;
-          flex: 1;
-          font-size: 14px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          transform-style: preserve-3d;
-
-          + a{
-            position: relative;
-            &:before{
-              content: '';
-              width: 1px;
-              height: 100%;
-              background-color: var(--gray_e);
-              position: absolute;
-              left: 0;
-              top: 0;
-              transform: translateX(-50%)
-            }
-          }
-
-          &.page .ic{
-            mask: url(images/homepage.png) no-repeat center center / cover;
-          }
-          &.git .ic{
-            mask: url(images/github.png) no-repeat center center / cover;
-          }
-
-          
-          p{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform-style: preserve-3d;
-            transition: .5s ease-in-out;
-            backface-visibility: hidden;
-            &.ic{
-              width: 18px;
-              height: 18px;
-              background-color: var(--blue);
-              transform: translate(-50%, -50%);
-            }
-            &.text{
-              transform: translate(-50%, -50%) perspective(200px) rotateY(180deg);
-            }
-          }
-
-          &:hover{
-            .ic{
-              transform: translate(-50%, -50%) perspective(200px) rotateY(180deg);
-            }
-            .text{
-              transform: translate(-50%, -50%) perspective(200px) rotateY(360deg);
-            }
-          }
-        }
-      }
-    }
-  }
-  .list.use_skill{
-    margin: 8px -4px -4px;
-  }
-`
-
 export const CareerDescriptionViewContainer = styled.ul`
   padding: 24px 0;
   li.career_item{
@@ -276,6 +166,45 @@ export const CareerDescriptionViewContainer = styled.ul`
           color: var(--blue);
           font-weight: bold;
         }
+        .info{
+          flex: 1;
+        }
+        .link{
+          display: flex;
+          align-items: center;
+          .ic{
+            width: 16px;
+            height: 16px;
+            background: var(--blue);
+            mask: url(images/homepage.png) no-repeat left center / auto 16px;
+          }
+          p.text{
+            padding-left: 6px;
+            span{
+              color: var(--blue);
+              font-size: 14px;
+              position: relative;
+            }
+          }
+
+          &:hover{
+            p span{
+              animation: textup 1.5s;
+              &:nth-of-type(1) {
+                animation-delay: .1s;
+              }
+              &:nth-of-type(2) {
+                animation-delay: .2s;
+              }
+              &:nth-of-type(3) {
+                animation-delay: .3s;
+              }
+              &:nth-of-type(4) {
+                animation-delay: .4s;
+              }
+            }
+          }
+        }
       }
     }
 
@@ -286,9 +215,13 @@ export const CareerDescriptionViewContainer = styled.ul`
           border: none;
           background-color: transparent;
           display: block;
+          &:hover img{
+            transform: scale(1.1);
+          }
         }
         img{
           width: 160px;
+          transition: transform .25s;
         }
       }
 
@@ -485,5 +418,122 @@ export const CareerDescriptionViewContainer = styled.ul`
         }
       }
     }
+  }
+
+  @keyframes textup {
+    0% { top: 0; }
+    20% { top: -3px; }
+    40% { top: 0 }
+    100% { top: 0 }
+  }
+`
+
+export const ProjectViewContainer = styled.ul`
+  margin: -24px;
+  display: flex;
+  flex-wrap: wrap;
+  > li {
+    width: calc(100% * 1 / 3);
+    padding: 24px;
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      &_img {
+        height: 200px;
+        padding: 12px 0;
+        background: var(--gray_f023);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      &_description {
+        padding: 20px;
+
+        .info{
+          margin: 4px 0 6px;
+          font-size: 14px;
+        }
+        
+        .period{
+          color: var(--gray_5);
+          font-size: 13px;
+          line-height: 21px;
+        }
+      }
+
+      &_link{
+        margin-top: auto;
+        border-top: 1px solid var(--gray_e);
+        display: flex;
+        a{
+          height: 46px;
+          flex: 1;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          transform-style: preserve-3d;
+
+          + a{
+            position: relative;
+            &:before{
+              content: '';
+              width: 1px;
+              height: 100%;
+              background-color: var(--gray_e);
+              position: absolute;
+              left: 0;
+              top: 0;
+              transform: translateX(-50%)
+            }
+          }
+
+          &.page .ic{
+            mask: url(images/homepage.png) no-repeat center center / cover;
+          }
+          &.git .ic{
+            mask: url(images/github.png) no-repeat center center / cover;
+          }
+
+          
+          p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            transition: .5s ease-in-out;
+            backface-visibility: hidden;
+            &.ic{
+              width: 18px;
+              height: 18px;
+              background-color: var(--blue);
+              transform: translate(-50%, -50%);
+            }
+            &.text{
+              transform: translate(-50%, -50%) perspective(200px) rotateY(180deg);
+            }
+          }
+
+          &:hover{
+            .ic{
+              transform: translate(-50%, -50%) perspective(200px) rotateY(180deg);
+            }
+            .text{
+              transform: translate(-50%, -50%) perspective(200px) rotateY(360deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .list.use_skill{
+    margin: 8px -4px -4px;
   }
 `

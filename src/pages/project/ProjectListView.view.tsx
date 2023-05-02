@@ -27,7 +27,13 @@ export default function ProjectListView() {
                 {projectItem.skills.map((skillItem, index) => (
                   <li key={`skillItem${index}`}>
                     <div className="badge">
-                      {skillItem !== 'SCSS' && (
+                      {skillItem === 'HTML5' && (
+                        <img src={`images/skill/html.png`} alt={skillItem} />
+                      )}
+                      {skillItem === 'CSS3' && (
+                        <img src={`images/skill/css.png`} alt={skillItem} />
+                      )}
+                      {(skillItem !== 'HTML5' && skillItem !== 'CSS3') && (
                         <img src={`images/skill/${skillItem}.png`} alt={skillItem} />
                       )}
                       <span>{skillItem}</span>

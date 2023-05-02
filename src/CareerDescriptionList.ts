@@ -1,4 +1,4 @@
-export type CareerDescriptionProps = {
+export type CareerDescription = {
   title: string
   period: string
   info: string
@@ -6,16 +6,21 @@ export type CareerDescriptionProps = {
   participation?: {name: string, percentage: string}[]
   cont?: string[]
   skills: string[]
-  img?: string
+  img?: string,
+  link? :string
 }
 
-export const CareerDescriptionList: CareerDescriptionProps[] = [
-  // {title: '셀러가드',
-  //   info: 'Web, Mobile',
-  //   tag: '셀러 안심 서비스 및 관리자 페이지',
-  //   period: '2022.03 ~ 2022.04',
-  //   skills: ['react', 'TypeScript', 'SCSS', 'HTML5']
-  // },
+export const CareerDescriptionList: CareerDescription[] = [
+  {title: '셀러가드',
+    period: '2022.03 ~ 2022.04',
+    info: '셀러 안심 서비스 및 관리자 페이지',
+    tag: ['Web', 'Mobile'],
+    img: 'images/project/sellerguard.png',
+    participation: [{name: 'design', percentage: '20%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '40%'}],
+    cont: ['Axios를 이용해 API를 호출하여 내 정보, 결제 내역 표시'],
+    skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
+    link: 'https://sg.sj-ez.com/'
+  },
   {title: 'Cashbook',
     period: '2022.03',  
     info: '가계부 프로그램',
@@ -85,6 +90,7 @@ export const CareerDescriptionList: CareerDescriptionProps[] = [
     tag: ['Mobile', '하이브리드 앱'],
     img: 'images/project/golf.png',
     participation: [{name: 'design', percentage: '80%'}, {name: 'publisher', percentage: '100%'}],
+    cont: ['일부 아이콘 제작'],
     skills: ['CSS3', 'HTML5']
   },
   {title: '트루원',
@@ -108,7 +114,8 @@ export const CareerDescriptionList: CareerDescriptionProps[] = [
     tag: ['Web', 'Tablet', 'Mobile', '관리자 페이지'],
     img: 'images/project/sj-ez.png',
     participation: [{name: 'publisher', percentage: '100%'}],
-    skills: ['react', 'TypeScript', 'SCSS', 'HTML5']
+    skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
+    link: 'https://sj-ez.com'
   },
   {title: 'SH Contents',
     period: '2019.11 ~ 2019.12',

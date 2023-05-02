@@ -35,7 +35,7 @@ export default function MainPage() {
               <div className="img" />
             </div>
             <div className="profile_txt">
-              <p>프론트엔드 개발자로 성장을 준비하는<br /> 퍼블리셔 <span>이가빈</span>입니다.</p>
+              <p>퍼블리셔로 시작하여 개발자로 꾸준한 성장을 꿈꾸는<br />프론트엔드 개발자 <span>이가빈</span>입니다.</p>
               <a href="mailto:leegb0621@gmail.com" className='mail'>leegb0621@gmail.com</a>
               <a href="tel:010-2790-5747" className='tel'>010-2790-5747</a>
               <a href='https://github.com/GabinLee' className='git'>https://github.com/GabinLee</a>
@@ -51,6 +51,26 @@ export default function MainPage() {
         </section>
 
         <ProjectView />
+
+        <section className='skills'>
+          <div className="inner">
+            <h1 className='section_title'><span>Skills</span></h1>
+            <ul>
+              <li><p className='html'>HTML5</p></li>
+              <li><p className='css'>CSS3</p></li>
+              <li><p className='react'>React</p></li>
+              <li><p className='javascript'>JavaScript</p></li>
+              <li><p className='typescript'>TypeScript</p></li>
+            </ul>
+            <ul>
+              <li><p className='xd'>Adobe Xd</p></li>
+              <li><p className='figma'>Figma</p></li>
+
+              <li><p className='git'>Github</p></li>
+            </ul>
+          </div>
+          <ul></ul>
+        </section>
 
         <section className="career">
           <h1 className='section_title'><span>Career</span></h1>
