@@ -224,7 +224,7 @@ export const Container = styled.div`
                 background: #e2f3e6 url(images/skill/javascript.png) no-repeat left 15px center / auto 16px;
               }
               &.typescript{
-                background: #e2f3e6 url(images/skill/typescript.png) no-repeat left 15px center / auto 16px;
+                background: #e2f3e6 url(images/skill/TypeScript.png) no-repeat left 15px center / auto 16px;
               }
 
               &.xd{
