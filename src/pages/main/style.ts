@@ -198,6 +198,7 @@ export const Container = styled.div`
         ul{
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
           &:nth-of-type(1){
             margin: -6px -6px 0;
           }
@@ -314,6 +315,7 @@ export const Container = styled.div`
             }
           }
         }
+
         &.project{
           .project_list{
             > li{
@@ -336,6 +338,45 @@ export const Container = styled.div`
                       font-size: 11px;
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+
+        &.skills{
+          ul{
+            li{
+              p{
+                height: 24px;
+                line-height: 24px;
+                border-radius: 12px;
+                font-size: 13px;
+                padding: 0 12px 0 30px;
+                &.html{
+                  background: #e2f3e6 url(images/skill/html.png) no-repeat left 12px center / auto 12px;
+                }
+                &.css{
+                  background: #e2f3e6 url(images/skill/css.png) no-repeat left 12px center / auto 12px;
+                }
+                &.react{
+                  background: #e2f3e6 url(images/skill/react.png) no-repeat left 12px center / auto 12px;
+                }
+                &.javascript{
+                  background: #e2f3e6 url(images/skill/javascript.png) no-repeat left 12px center / auto 12px;
+                }
+                &.typescript{
+                  background: #e2f3e6 url(images/skill/TypeScript.png) no-repeat left 12px center / auto 12px;
+                }
+
+                &.xd{
+                  background: #fff7d5 url(images/skill/xd.png) no-repeat left 12px center / auto 12px;
+                }
+                &.figma{
+                  background: #fff7d5 url(images/skill/figma.png) no-repeat left 12px center / auto 12px;
+                }
+                &.git{
+                  background: #ffebeb url(images/skill/github.png) no-repeat left 12px center / auto 12px;
                 }
               }
             }
