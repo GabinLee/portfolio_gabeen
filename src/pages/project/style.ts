@@ -321,8 +321,16 @@ export const CareerDescriptionViewContainer = styled.ul`
           left: 200px;
         }
         .right{
+          position: relative;
           .title{
             margin-bottom: 4px;
+            padding-right: 60px;
+          }
+
+          .link{
+            position: absolute;
+            top: 0;
+            right: 24px;
           }
         }
       }
