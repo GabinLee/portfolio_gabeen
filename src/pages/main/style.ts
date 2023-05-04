@@ -195,16 +195,21 @@ export const Container = styled.div`
       }
 
       &.skills{
+        .inner div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          ul{
+            margin: 6px 0 -6px;
+          }
+        }
+        > ul{
+          margin: -6px -6px 0;
+        }
         ul{
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-          &:nth-of-type(1){
-            margin: -6px -6px 0;
-          }
-          &:nth-of-type(2){
-            margin: 6px -6px -6px;
-          }
           li{
             padding: 6px;
             p{
@@ -217,6 +222,9 @@ export const Container = styled.div`
               }
               &.css{
                 background: #e2f3e6 url(images/skill/css.png) no-repeat left 15px center / auto 16px;
+              }
+              &.scss{
+                background: #e2f3e6 url(images/skill/scss.png) no-repeat left 15px center / auto 16px;
               }
               &.react{
                 background: #e2f3e6 url(images/skill/react.png) no-repeat left 15px center / auto 16px;
@@ -233,6 +241,9 @@ export const Container = styled.div`
               }
               &.figma{
                 background: #fff7d5 url(images/skill/figma.png) no-repeat left 15px center / auto 16px;
+              }
+              &.zeplin{
+                background: #ffebeb url(images/skill/zeplin.png) no-repeat left 15px center / auto 16px;
               }
               &.git{
                 background: #ffebeb url(images/skill/github.png) no-repeat left 15px center / auto 16px;
@@ -345,6 +356,9 @@ export const Container = styled.div`
         }
 
         &.skills{
+          .inner div{
+            display: block;
+          }
           ul{
             li{
               p{
@@ -358,6 +372,9 @@ export const Container = styled.div`
                 }
                 &.css{
                   background: #e2f3e6 url(images/skill/css.png) no-repeat left 12px center / auto 12px;
+                }
+                &.scss{
+                  background: #e2f3e6 url(images/skill/scss.png) no-repeat left 12px center / auto 12px;
                 }
                 &.react{
                   background: #e2f3e6 url(images/skill/react.png) no-repeat left 12px center / auto 12px;
@@ -374,6 +391,9 @@ export const Container = styled.div`
                 }
                 &.figma{
                   background: #fff7d5 url(images/skill/figma.png) no-repeat left 12px center / auto 12px;
+                }
+                &.zeplin{
+                  background: #ffebeb url(images/skill/zeplin.png) no-repeat left 12px center / auto 12px;
                 }
                 &.git{
                   background: #ffebeb url(images/skill/github.png) no-repeat left 12px center / auto 12px;

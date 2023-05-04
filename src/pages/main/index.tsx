@@ -58,18 +58,22 @@ export default function MainPage() {
             <ul>
               <li><p className='html'>HTML5</p></li>
               <li><p className='css'>CSS3</p></li>
+              <li><p className='scss'>SCSS</p></li>
               <li><p className='react'>React</p></li>
               <li><p className='javascript'>JavaScript</p></li>
               <li><p className='typescript'>TypeScript</p></li>
             </ul>
-            <ul>
-              <li><p className='xd'>Adobe Xd</p></li>
-              <li><p className='figma'>Figma</p></li>
-
-              <li><p className='git'>Github</p></li>
-            </ul>
+            <div>
+              <ul>
+                <li><p className='xd'>Adobe Xd</p></li>
+                <li><p className='figma'>Figma</p></li>
+              </ul>
+              <ul>
+                <li><p className='zeplin'>Zeplin</p></li>
+                <li><p className='git'>Github</p></li>
+              </ul>
+            </div>
           </div>
-          <ul></ul>
         </section>
 
         <section className="career">
