@@ -17,7 +17,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web', 'Mobile'],
     img: 'images/project/sellerguard.png',
     participation: [{name: 'design', percentage: '20%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '40%'}],
-    cont: ['Axios를 이용해 API를 호출하여 내 정보, 결제 내역 표시'],
+    cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
     link: 'https://sg.sj-ez.com/'
   },
@@ -42,7 +42,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web'],
     img: 'images/project/paybill.png',
     participation: [{name: 'plan', percentage: '40%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '20%'}],
-    cont: ['Axios를 이용해 API를 호출하여 리스트 생성, 수정, 삭제 관리'],
+    cont: ['Axios를 이용해 REST API를 연동하여 리스트 생성, 수정, 삭제 관리'],
     skills: ['react', 'SCSS', 'HTML5']
   },
   {title: '인더스팟',
