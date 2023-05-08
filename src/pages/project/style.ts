@@ -247,6 +247,9 @@ export const CareerDescriptionViewContainer = styled.ul`
             font-size: 14px;
             list-style-type: disc;
             padding-inline-start: 11px;
+            li + li{
+              margin-top: 6px;
+            }
           }
 
           &.use_skill{
