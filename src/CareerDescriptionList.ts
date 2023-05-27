@@ -11,6 +11,26 @@ export type CareerDescription = {
 }
 
 export const CareerDescriptionList: CareerDescription[] = [
+  {title: '캐시북',
+    period: '2022.05 ~ ',
+    info: '모임별 수입, 지출, 저축을 기록하고 관리하는 가계부 서비스',
+    tag: ['Web'],
+    // img: 'images/project/sellerguard.png',
+    participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
+    // cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
+    skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
+    // link: 'https://sg.sj-ez.com/'
+  },
+  {title: '여행일지',
+    period: '2022.04 ~ ',
+    info: '여행 일정 기록 서비스',
+    tag: ['Web'],
+    // img: 'images/project/sellerguard.png',
+    participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
+    // cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
+    skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
+    // link: 'https://sg.sj-ez.com/'
+  },
   {title: '셀러가드',
     period: '2022.03 ~ 2022.04',
     info: '셀러 안심 서비스 및 관리자 페이지',
@@ -22,7 +42,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     link: 'https://sg.sj-ez.com/'
   },
   {title: 'Cashbook',
-    period: '2022.03',  
+    period: '2022.03',
     info: '가계부 프로그램',
     tag: ['Web'],
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}],
