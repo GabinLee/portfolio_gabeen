@@ -81,7 +81,13 @@ export default function CareerDescriptionListView() {
                           {skillItem === 'SCSS' && (
                             <img src={`images/skill/scss.png`} alt={skillItem} />
                           )}
-                          {(skillItem !== 'HTML5' && skillItem !== 'CSS3' && skillItem !== 'SCSS') && (
+                          {skillItem === 'TypeScript' && (
+                            <img src={`images/skill/typescript.png`} alt={skillItem} />
+                          )}
+                          {skillItem === 'Electron' && (
+                            <img src={`images/skill/electron.png`} alt={skillItem} />
+                          )}
+                          {(skillItem !== 'HTML5' && skillItem !== 'CSS3' && skillItem !== 'SCSS' && skillItem !== 'TypeScript' && skillItem !== 'Electron') && (
                             <img src={`images/skill/${skillItem}.png`} alt={skillItem} />
                           )}
                           <span>{skillItem}</span>
