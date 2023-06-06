@@ -333,7 +333,6 @@ export const CareerDescriptionViewContainer = styled.ul`
           .link{
             position: absolute;
             top: 0;
-            right: 24px;
           }
         }
       }
@@ -343,6 +342,18 @@ export const CareerDescriptionViewContainer = styled.ul`
           .list.participation{
             display: flex;
             flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) and (min-width: 501px) {
+    li.career_item{
+      .top{
+        .right{
+          .link{
+            right: 24px;
           }
         }
       }
@@ -367,8 +378,10 @@ export const CareerDescriptionViewContainer = styled.ul`
           font-size: 13px;
           text-align: right;
         }
-        .info{
-          font-size: 13px;
+        .right{
+          .info{
+            font-size: 13px;
+          }
         }
       }
       .bottom{
@@ -405,11 +418,16 @@ export const CareerDescriptionViewContainer = styled.ul`
           text-align: left;
           font-size: 12px;
         }
-        .title{
-          font-size: 15px;
-        }
-        .info{
-          font-size: 12px;
+        .right{
+          .title{
+            font-size: 15px;
+          }
+          .info{
+            font-size: 12px;
+          }
+          .link{
+            right: 0;
+          }
         }
       }
 

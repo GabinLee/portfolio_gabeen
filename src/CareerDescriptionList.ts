@@ -19,7 +19,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
     // cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
-    // link: 'https://sg.sj-ez.com/'
+    link: 'https://prismatic-puffpuff-29115a.netlify.app'
   },
   {title: '여행일지',
     period: '2022.04 ~ ',
@@ -85,7 +85,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     info: '공간 공유/대여 서비스',
     tag: ['Web', 'Mobile', '적응형'],
     participation: [{name: 'publisher', percentage: '100%'}],
-    skills: ['Next.js', 'TypeScript', 'SCSS', 'HTML5'],
+    skills: ['next.js', 'TypeScript', 'SCSS', 'HTML5'],
     img: 'images/project/pinespace.png'
   },
   {title: 'AVRO',
