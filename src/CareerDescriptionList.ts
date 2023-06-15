@@ -11,25 +11,25 @@ export type CareerDescription = {
 }
 
 export const CareerDescriptionList: CareerDescription[] = [
-  {title: '캐시북',
+  {title: 'Cashbook',
     period: '2022.05 ~ ',
     info: '모임별 수입, 지출, 저축을 기록하고 관리하는 가계부 서비스',
     tag: ['Web'],
-    // img: 'images/project/sellerguard.png',
+    // img: '',
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
-    // cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
+    cont: ['styled-components 사용', '카카오 로그인', 'Axios, REST API를 사용', '모임별 가계부 리스트, 가계부 history, 통계, 카테고리 설정', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성'],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
-    link: 'https://prismatic-puffpuff-29115a.netlify.app'
+    link: 'https://cash-book.netlify.app'
   },
   {title: '여행일지',
     period: '2022.04 ~ ',
     info: '여행 일정 기록 서비스',
     tag: ['Web'],
-    // img: 'images/project/sellerguard.png',
+    // img: '',
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
-    // cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
+    cont: ['styled-components 사용', '카카오 로그인', '여행별 체크리스트'],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
-    // link: 'https://sg.sj-ez.com/'
+    // link: ''
   },
   {title: '셀러가드',
     period: '2022.03 ~ 2022.04',
@@ -37,23 +37,24 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web', 'Mobile'],
     img: 'images/project/sellerguard.png',
     participation: [{name: 'design', percentage: '20%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '40%'}],
-    cont: ['Axios를 이용해 REST API를 연동하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
+    cont: ['styled-components 사용', 'Axios, REST API를 사용하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
     link: 'https://sg.sj-ez.com/'
   },
-  {title: 'Cashbook',
-    period: '2022.03',
-    info: '가계부 프로그램',
-    tag: ['Web'],
-    participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}],
-    skills: ['Electron', 'react', 'TypeScript', 'SCSS', 'HTML5']
-  },
+  // {title: 'Cashbook',
+  //   period: '2022.03',
+  //   info: '가계부 프로그램',
+  //   tag: ['Web'],
+  //   participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}],
+  //   skills: ['Electron', 'react', 'TypeScript', 'SCSS', 'HTML5']
+  // },
   {title: 'Squid Shell',
     period: '2022.08 ~ 2023.01',
     info: 'SSH 클라이언트 데스크톱 앱',
     tag: ['Web', '반응형'],
     img: 'images/project/squidshell.png',
     participation: [{name: 'publisher', percentage: '100%'}],
+    cont: ['styled-components 사용'],
     skills: ['Electron', 'react', 'TypeScript', 'SCSS', 'HTML5']
   },
   {title: 'Paybill',
@@ -62,7 +63,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web'],
     img: 'images/project/paybill.png',
     participation: [{name: 'plan', percentage: '40%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '20%'}],
-    cont: ['Axios를 이용해 REST API를 연동하여 리스트 생성, 수정, 삭제 관리'],
+    cont: ['styled-components 사용', 'Axios, REST API를 사용하여 리스트 생성, 수정, 삭제(공지사항, 자주 묻는 질문)'],
     skills: ['react', 'SCSS', 'HTML5']
   },
   {title: '인더스팟',
@@ -71,6 +72,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web', '관리자 페이지'],
     img: 'images/project/inthespot.png',
     participation: [{name: 'publisher', percentage: '100%'}],
+    cont: ['styled-components 사용'],
     skills: ['react', 'SCSS', 'HTML5']
   },
   {title: '쇼핑몰',
@@ -84,8 +86,9 @@ export const CareerDescriptionList: CareerDescription[] = [
     period: '2022.07 ~ 2022.10',
     info: '공간 공유/대여 서비스',
     tag: ['Web', 'Mobile', '적응형'],
-    participation: [{name: 'publisher', percentage: '100%'}],
-    skills: ['next.js', 'TypeScript', 'SCSS', 'HTML5'],
+    participation: [{name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '20%'}],
+    cont: ['호스트의 예약관리, 공간관리, 질문관리'],
+    skills: ['styled-components 사용', 'next.js', 'TypeScript', 'SCSS', 'HTML5'],
     img: 'images/project/pinespace.png'
   },
   {title: 'AVRO',
