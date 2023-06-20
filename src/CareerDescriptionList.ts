@@ -17,7 +17,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web'],
     // img: '',
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
-    cont: ['styled-components 사용', '카카오 로그인', 'Axios, REST API를 사용', '모임별 가계부 리스트, 가계부 history, 통계, 카테고리 설정', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성'],
+    cont: ['styled-components 사용', '카카오 로그인', 'Axios, REST API를 사용', '모임별 가계부 리스트, 가계부 history, 통계, 카테고리 설정', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성', '테스트용 계정: ID(guest), Password(abcd1234!)'],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
     link: 'https://cash-book.netlify.app'
   },
@@ -87,8 +87,8 @@ export const CareerDescriptionList: CareerDescription[] = [
     info: '공간 공유/대여 서비스',
     tag: ['Web', 'Mobile', '적응형'],
     participation: [{name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '20%'}],
-    cont: ['호스트의 예약관리, 공간관리, 질문관리'],
-    skills: ['styled-components 사용', 'next.js', 'TypeScript', 'SCSS', 'HTML5'],
+    cont: ['styled-components 사용', '호스트의 예약관리, 공간관리, 질문관리'],
+    skills: ['next.js', 'TypeScript', 'SCSS', 'HTML5'],
     img: 'images/project/pinespace.png'
   },
   {title: 'AVRO',
