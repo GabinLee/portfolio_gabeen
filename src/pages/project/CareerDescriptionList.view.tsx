@@ -25,17 +25,11 @@ export default function CareerDescriptionListView() {
               <div className="right">
                 <p className="title">{item.title}</p>
                 <p className="info">{item.info}</p>
-                {item.link && (
-                  <a href={item.link} target="_blank" className="link" rel="noreferrer">
-                    <p className="ic" />
-                    <p className='text'>
-                      <span>P</span>
-                      <span>a</span>
-                      <span>g</span>
-                      <span>e</span>
-                    </p>
-                    </a>
-                )}
+                <ul className="list tag">
+                  {item.tag.map((tagItem, iIndex) => (
+                    <li key={`tagItem${index}${iIndex}`}><span>#{tagItem}</span></li> 
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -52,14 +46,9 @@ export default function CareerDescriptionListView() {
                   )}
                 </button>
               </div>
+
               <div className="right">
                 <div>
-                  <ul className="list info">
-                    {item.tag.map((tagItem, iIndex) => (
-                      <li key={`infoItem${index}${iIndex}`}><span>#{tagItem}</span></li> 
-                    ))}
-                  </ul>
-                  
                   {item.cont && (
                     <ul className="list cont">
                       {item.cont.map((contItem, cIndex) => (
@@ -68,27 +57,49 @@ export default function CareerDescriptionListView() {
                     </ul>
                   )}
 
+                  {item.link && (
+                    <div className="bx_link">
+                      <a href={item.link} target="_blank" className="link" rel="noreferrer">
+                        <p className="ic" />
+                        <p className='text'>
+                          <span>P</span>
+                          <span>a</span>
+                          <span>g</span>
+                          <span>e</span>
+                        </p>
+                      </a>
+
+                      {item.linkAccount && (
+                        <p className="link_account">{item.linkAccount}</p>
+                      )}
+                    </div>
+                  )}
+
                   <ul className='list use_skill'>
                     {item.skills.map((skillItem, sIndex) => (
                       <li key={`skillItem${index}${sIndex}`}>
                         <div className="badge">
-                          {skillItem === 'HTML5' && (
-                            <img src={`images/skill/html.png`} alt={skillItem} />
-                          )}
-                          {skillItem === 'CSS3' && (
-                            <img src={`images/skill/css.png`} alt={skillItem} />
-                          )}
-                          {skillItem === 'SCSS' && (
-                            <img src={`images/skill/scss.png`} alt={skillItem} />
-                          )}
-                          {skillItem === 'TypeScript' && (
-                            <img src={`images/skill/typescript.png`} alt={skillItem} />
-                          )}
-                          {skillItem === 'Electron' && (
-                            <img src={`images/skill/electron.png`} alt={skillItem} />
-                          )}
-                          {(skillItem !== 'HTML5' && skillItem !== 'CSS3' && skillItem !== 'SCSS' && skillItem !== 'TypeScript' && skillItem !== 'Electron') && (
-                            <img src={`images/skill/${skillItem}.png`} alt={skillItem} />
+                          {skillItem !== 'styled-components' && (
+                            <>
+                            {skillItem === 'HTML5' && (
+                              <img src={`images/skill/html.png`} alt={skillItem} />
+                            )}
+                            {skillItem === 'CSS3' && (
+                              <img src={`images/skill/css.png`} alt={skillItem} />
+                            )}
+                            {skillItem === 'SCSS' && (
+                              <img src={`images/skill/scss.png`} alt={skillItem} />
+                            )}
+                            {skillItem === 'TypeScript' && (
+                              <img src={`images/skill/typescript.png`} alt={skillItem} />
+                            )}
+                            {skillItem === 'Electron' && (
+                              <img src={`images/skill/electron.png`} alt={skillItem} />
+                            )}
+                            {(skillItem !== 'HTML5' && skillItem !== 'CSS3' && skillItem !== 'SCSS' && skillItem !== 'TypeScript' && skillItem !== 'Electron') && (
+                              <img src={`images/skill/${skillItem}.png`} alt={skillItem} />
+                            )}
+                            </>
                           )}
                           <span>{skillItem}</span>
                         </div>

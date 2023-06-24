@@ -31,11 +31,15 @@ export default function MainPage() {
       <main>
         <section className="intro">
           <div className="card">
-            <div className="profile_img">
-              <div className="img" />
+            <div className="profile img">
+              <div className="image" />
             </div>
-            <div className="profile_txt">
-              <p>퍼블리셔로 시작하여 개발자로 꾸준한 성장을 꿈꾸는 <br />프론트엔드 개발자 <span>이가빈</span>입니다.</p>
+            <div className="profile txt">
+              <div className="introduce">
+                <p>안녕하세요!</p>
+                <p>퍼블리셔로 시작하여 개발자로 꾸준한 성장을 꿈꾸는</p>
+                <p>신입 프론트엔드 개발자 <span>이가빈</span>입니다.</p>
+              </div>
               <a href="mailto:leegb0621@gmail.com" className='mail'>leegb0621@gmail.com</a>
               <a href="tel:010-2790-5747" className='tel'>010-2790-5747</a>
               <a href='https://github.com/GabinLee' className='git'>https://github.com/GabinLee</a>

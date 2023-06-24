@@ -87,30 +87,30 @@ export const Container = styled.div`
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-          > div{
+          .profile{
             margin: 0 auto;
             padding: 24px;
-          }
-          .profile{
-            &_img{
-              .img{
+            &.img{
+              .image{
                 width: 200px;
                 height: 200px;
                 border-radius: 50%;
                 background: url(images/me.jpg) no-repeat 60% center / cover;
               }
             }
-            &_txt{
+            &.txt{
               display: flex;
               flex-direction: column;
               align-items: flex-start;
-              p{
-                margin-bottom: 24px;
-                font-size: 20px;
-                line-height: 1.5;
-                span{
-                  color: var(--blue);
-                  font-weight: 600;
+              .introduce{
+                padding-bottom: 24px;
+                p{
+                  font-size: 20px;
+                  line-height: 1.5;
+                  span{
+                    color: var(--blue);
+                    font-weight: 600;
+                  }
                 }
               }
               a{

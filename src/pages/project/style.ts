@@ -168,6 +168,64 @@ export const CareerDescriptionViewContainer = styled.ul`
         }
         .info{
           flex: 1;
+          min-width: 140px;
+          padding-right: 24px;
+        }
+        .tag{
+          margin: -3px -6px;
+          font-size: 14px;
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            padding: 3px 6px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .bottom{
+      .left{
+        button{
+          padding: 0;
+          border: none;
+          background-color: transparent;
+          display: block;
+          &:hover img{
+            transform: scale(1.1);
+          }
+        }
+        img{
+          width: 160px;
+          transition: transform .25s;
+        }
+      }
+
+      .right{
+        .list{
+          &.participation{
+            font-size: 13px;
+          }
+
+          &.cont{
+            margin-top: 12px;
+            font-size: 14px;
+            list-style-type: disc;
+            padding-inline-start: 11px;
+            li + li{
+              margin-top: 6px;
+            }
+          }
+
+          &.use_skill{
+            margin: 10px -4px -4px;
+          }
+        }
+
+        .bx_link{
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
         }
         .link{
           display: flex;
@@ -204,56 +262,11 @@ export const CareerDescriptionViewContainer = styled.ul`
               }
             }
           }
-        }
-      }
-    }
 
-    .bottom{
-      .left{
-        button{
-          padding: 0;
-          border: none;
-          background-color: transparent;
-          display: block;
-          &:hover img{
-            transform: scale(1.1);
-          }
-        }
-        img{
-          width: 160px;
-          transition: transform .25s;
-        }
-      }
-
-      .right{
-        .list{
-          &.participation{
-            font-size: 13px;
-          }
-
-          &.info{
-            margin: -3px -6px;
-            font-size: 14px;
-            display: flex;
-            flex-wrap: wrap;
-            li{
-              padding: 3px 6px;
-              white-space: nowrap;
-            }
-          }
-
-          &.cont{
-            margin-top: 12px;
-            font-size: 14px;
-            list-style-type: disc;
-            padding-inline-start: 11px;
-            li + li{
-              margin-top: 6px;
-            }
-          }
-
-          &.use_skill{
-            margin: 10px -4px -4px;
+          &_account{
+            margin-left: 12px;
+            margin-bottom: -2px;
+            font-size: 12px;
           }
         }
       }
@@ -294,6 +307,9 @@ export const CareerDescriptionViewContainer = styled.ul`
               transform: translate(-50%, -50%);
             }
           }
+          .tag{
+            justify-content: flex-end;
+          }
         }
       }
 
@@ -329,10 +345,8 @@ export const CareerDescriptionViewContainer = styled.ul`
             margin-bottom: 4px;
             padding-right: 60px;
           }
-
-          .link{
-            position: absolute;
-            top: 0;
+          .tag{
+            margin-top: 12px;
           }
         }
       }
@@ -342,18 +356,6 @@ export const CareerDescriptionViewContainer = styled.ul`
           .list.participation{
             display: flex;
             flex-wrap: wrap;
-          }
-        }
-      }
-    }
-  }
-  
-  @media screen and (max-width: 768px) and (min-width: 501px) {
-    li.career_item{
-      .top{
-        .right{
-          .link{
-            right: 24px;
           }
         }
       }
@@ -424,9 +426,6 @@ export const CareerDescriptionViewContainer = styled.ul`
           }
           .info{
             font-size: 12px;
-          }
-          .link{
-            right: 0;
           }
         }
       }
