@@ -18,7 +18,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     tag: ['Web'],
     // img: '',
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
-    cont: ['카카오 로그인', 'Axios, REST API를 사용', '상황별 가계부 리스트, 가계부 history, 통계, 카테고리', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성'],
+    cont: ['카카오 로그인', 'Axios, REST API를 사용', 'redux-toolkit을 사용하여 token, user의 상태관리', '상황별 가계부 리스트, 가계부 history, 통계, 카테고리', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성'],
     skills: ['react', 'TypeScript', 'styled-components', 'SCSS', 'HTML5'],
     link: 'https://cash-book.netlify.app',
     linkAccount: '테스트용 계정: ID(guest), Password(abcd1234!)'
