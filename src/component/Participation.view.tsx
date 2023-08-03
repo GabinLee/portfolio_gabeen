@@ -7,7 +7,6 @@ type StyledProps = {
 type ParticipationProps = {
   name: string
   percentage: string
-  // children: React.ReactNode
   styles: StyledProps
 }
 

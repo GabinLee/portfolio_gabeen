@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { ModalData } from "../models/AlertModal";
 
 type BaseModalProps = {
   children: React.ReactNode,
