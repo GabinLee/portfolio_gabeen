@@ -13,6 +13,10 @@ export default function CashbookPage() {
   const [selectedImage, setSelectedImage] = useState('');
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
+  useEffect(() => {
     if(showImage === true) {
       document.body.style.overflow = "hidden";
     } else {
