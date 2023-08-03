@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CareerDescriptionViewContainer } from "./style";
 import { CareerDescription, CareerDescriptionList } from "../../CareerDescriptionList";
 import ParticipationView from "../../component/Participation.view";
+import { Link } from "react-router-dom";
 
 
 export default function CareerDescriptionListView() {
@@ -45,7 +46,7 @@ export default function CareerDescriptionListView() {
 
                 <div className="link_bx">
                   {item.link && (
-                    <a href={item.link} className="link develop">
+                    <Link to={item.link} className="link develop">
                       <p className="ic" />
                       <p className="txt">
                         <span>개</span>
@@ -54,7 +55,7 @@ export default function CareerDescriptionListView() {
                         <span>야</span>
                         <span>기</span>
                       </p>
-                    </a>
+                    </Link>
                   )}
 
                   {item.homepageLink && (
