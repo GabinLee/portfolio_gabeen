@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container } from "./style";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 export default function LayoutPage() {
@@ -22,7 +22,7 @@ export default function LayoutPage() {
     <Container className={`${isScroll ? 'scroll' : ''}`}>
       <header>
         <div className="inner">
-          <a href="/"><img src="images/gabeen_logo.png" alt="가빈" /></a>
+          <Link to="/"><img src="images/gabeen_logo.png" alt="가빈" /></Link>
         </div>
       </header>
 
