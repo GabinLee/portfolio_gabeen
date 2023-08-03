@@ -7,20 +7,24 @@ export type CareerDescription = {
   cont?: string[]
   skills: string[]
   img?: string,
-  link? :string
+  link?: string
+  homepageLink? :string
   linkAccount? :string
 }
 
 export const CareerDescriptionList: CareerDescription[] = [
   {title: 'Cashbook',
     period: '2022.05 ~ ',
-    info: '상황별 수입, 지출, 저축을 기록하고 관리하는 가계부 서비스',
+    info: '용도별 수입, 지출, 저축을 기록하고 관리하는 가계부 서비스',
     tag: ['Web'],
     // img: '',
     participation: [{name: 'plan', percentage: '100%'}, {name: 'design', percentage: '100%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '100%'}],
-    cont: ['카카오 로그인', 'Axios, REST API를 사용', 'redux-toolkit을 사용하여 token, user의 상태관리', '상황별 가계부 리스트, 가계부 history, 통계, 카테고리', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성'],
+    cont: ['Axios, REST API를 사용', 'redux-toolkit을 사용하여 token, user 상태관리'
+      // '카카오 로그인', 'Axios, REST API를 사용', 'redux-toolkit을 사용하여 token, user의 상태관리', '상황별 가계부 리스트, 가계부 history, 통계, 카테고리', 'map, filter, includes 등을 사용하여 history 필터 적용', 'map, filter, includes, forEach, reduce 등을 사용하여 history 통계 생성'
+    ],
     skills: ['react', 'TypeScript', 'styled-components', 'SCSS', 'HTML5'],
-    link: 'https://cash-book.netlify.app',
+    link: '/cashbook',
+    homepageLink: 'https://cash-book.netlify.app',
     linkAccount: '테스트용 계정: ID(guest), Password(abcd1234!)'
   },
   // {title: '여행일지',
@@ -41,7 +45,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     participation: [{name: 'design', percentage: '20%'}, {name: 'publisher', percentage: '100%'}, {name: 'front-end', percentage: '40%'}],
     cont: ['Axios, REST API를 사용하여 내 정보, 결제 내역 표시', 'TypeScript를 활용하여 UI 컴포넌트를 제작하고 적용'],
     skills: ['react', 'TypeScript', 'styled-components', 'SCSS', 'HTML5'],
-    link: 'https://sg.sj-ez.com/'
+    homepageLink: 'https://sg.sj-ez.com/'
   },
   // {title: 'Cashbook',
   //   period: '2022.03',
@@ -140,7 +144,7 @@ export const CareerDescriptionList: CareerDescription[] = [
     img: 'images/project/sj-ez.png',
     participation: [{name: 'publisher', percentage: '100%'}],
     skills: ['react', 'TypeScript', 'SCSS', 'HTML5'],
-    link: 'https://sj-ez.com'
+    homepageLink: 'https://sj-ez.com'
   },
   {title: 'SH Contents',
     period: '2019.11 ~ 2019.12',

@@ -1,10 +1,20 @@
-import './App.scss';
+import { Route, Routes } from 'react-router-dom';
+import './global.scss';
+import LayoutPage from './pages/layout';
 import MainPage from './pages/main';
+import CashbookPage from './pages/cashbook';
 
 
 function App() {
   return (
-    <MainPage />
+    <Routes>
+      <Route path="/" element={<LayoutPage />}>
+        <Route path="" element={<MainPage />} />
+        <Route path="/cashbook" element={<CashbookPage />} />
+      </Route>
+    </Routes>
+
+    // "homepage": "https://gabinlee.github.io/portfolio_gabeen",
   );
 }
 

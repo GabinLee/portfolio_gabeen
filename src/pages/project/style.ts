@@ -18,8 +18,8 @@ export const Container = styled.section`
       > li{
         padding: 4px;
         .badge{
-          padding: 4px 12px;
-          border-radius: 20px;
+          padding: 4px 8px;
+          border-radius: 4px;
           background-color: var(--gray_f023);
           display: flex;
           align-items: center;
@@ -29,7 +29,6 @@ export const Container = styled.section`
             margin-right: 6px;
           }
           span{
-            font-size: 12px;
             text-transform: capitalize;
           }
         }
@@ -100,25 +99,40 @@ export const Container = styled.section`
   }
 
   @media screen and (min-width: 481px) {
-    .area.menu{
-      button:not(.active):hover{
-        &::before{
-          height: 100%;
-        }
-        h1{
-          -webkit-text-fill-color: white;
+    .area{
+      &.menu{
+        button:not(.active):hover{
+          &::before{
+            height: 100%;
+          }
+          h1{
+            -webkit-text-fill-color: white;
+          }
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 501px) {
+    .badge span{
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .badge span{
+      font-size: 12px;
     }
   }
 `
 
 export const CareerDescriptionViewContainer = styled.ul`
-  padding: 24px 0;
+  padding: 30px 0;
+
   li.career_item{
     position: relative;
     + li{
-      margin-top: 36px;
+      margin-top: 90px;
     }
     &::before{
       content: '';
@@ -126,127 +140,104 @@ export const CareerDescriptionViewContainer = styled.ul`
       position: absolute;
     }
     &:first-child::before{
-      height: calc(100% - 34px);
+      height: calc(100% - 40px);
       bottom: 0;
     }
     &:not(:first-child):not(:last-child)::before{
-      height: calc(100% + 36px);
-      top: -36px;
+      height: calc(100% + 90px);
+      top: -90px;
     }
     &:last-child::before{
-      height: 70px;
-      top: -36px;
+      height: 130px;
+      top: -90px;
     }
     
-    > div{  // top, bottom
-      display: flex;
-    }
-    .right{
-      flex: 1;
-    }
-
-
-    .top{
-      margin-bottom: 12px;
-      position: relative;
-      &::before{
-        content: '';
-        width: 7px;
-        height: 7px;
-        border: 2px solid var(--blue);
-        border-radius: 50%;
-        background-color: white;
-        box-shadow: 0 0 3px 3px rgba(70, 117, 192, .25);
-        position: absolute;
-        transform: translate(-50%, -50%);
+    .row{
+      &_right{
+        flex: 1;
       }
-      .right{
+
+      &.top{
+        margin-bottom: 12px;
+        position: relative;
+        &::before{
+          content: '';
+          width: 7px;
+          height: 7px;
+          border: 2px solid var(--blue);
+          border-radius: 50%;
+          background-color: white;
+          box-shadow: 0 0 3px 3px rgba(70, 117, 192, .25);
+          position: absolute;
+          transform: translate(-50%, -50%);
+        }
+
         .title{
           white-space: nowrap;
           color: var(--blue);
-          font-weight: bold;
         }
-        .info{
-          flex: 1;
-          min-width: 140px;
-          padding-right: 24px;
-        }
+
         .tag{
           margin: -3px -6px;
           font-size: 14px;
-          display: flex;
-          flex-wrap: wrap;
           li{
             padding: 3px 6px;
             white-space: nowrap;
           }
         }
       }
-    }
-
-    .bottom{
-      .left{
-        button{
-          padding: 0;
-          border: none;
-          background-color: transparent;
-          display: block;
-          &:hover img{
-            transform: scale(1.1);
-          }
-        }
-        img{
-          width: 160px;
-          transition: transform .25s;
-        }
-      }
-
-      .right{
-        .list{
-          &.participation{
-            font-size: 13px;
-          }
-
-          &.cont{
-            margin-top: 12px;
-            font-size: 14px;
-            list-style-type: disc;
-            padding-inline-start: 11px;
-            li + li{
-              margin-top: 6px;
-            }
-          }
-
-          &.use_skill{
-            margin: 10px -4px -4px;
+      
+      &.bottom{
+        .cont{
+          margin-top: 20px;
+          list-style-type: disc;
+          padding-inline-start: 12px;
+          li{
+            padding: 4px 0;
           }
         }
 
-        .bx_link{
-          margin-top: 12px;
-          display: flex;
-          align-items: center;
-        }
         .link{
-          display: flex;
+          padding: 4px 0;
           align-items: center;
+          + .link{
+            margin-top: 10px;
+          }
+
+          &_bx{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           .ic{
             width: 16px;
             height: 16px;
-            background: var(--blue);
-            mask: url(images/homepage.png) no-repeat left center / auto 16px;
+            margin-right: 6px;
           }
-          p.text{
-            padding-left: 6px;
+          .txt{
+            border-bottom: 1px solid #aaa;
             span{
-              color: var(--blue);
-              font-size: 14px;
+              font-size: inherit;
               position: relative;
             }
           }
 
+          &.develop{
+            .ic{
+              background: url(images/ic_document.svg) no-repeat center center / cover;
+            }
+          }
+
+          &.homepage{
+            .ic{
+              background: url(images/ic_home.svg) no-repeat center center / cover;
+            }
+          }
+
           &:hover{
-            p span{
+            span{
               animation: textup 1.5s;
               &:nth-of-type(1) {
                 animation-delay: .1s;
@@ -260,14 +251,20 @@ export const CareerDescriptionViewContainer = styled.ul`
               &:nth-of-type(4) {
                 animation-delay: .4s;
               }
+              &:nth-of-type(5) {
+                animation-delay: .5s;
+              }
             }
           }
 
           &_account{
-            margin-left: 12px;
-            margin-bottom: -2px;
-            font-size: 12px;
+            margin: 6px 0 0 24px;
+            font-size: 14px;
           }
+        }
+
+        .use_skill{
+          margin: 20px -4px -4px;
         }
       }
     }
@@ -279,47 +276,31 @@ export const CareerDescriptionViewContainer = styled.ul`
       &::before{
         left: 239.5px;
       }
-      .left{
-        width: 240px;
-        min-width: 240px;
-      }
-
-      .top{
-        align-items: center;
-        &::before{
-          left: 240px;
-        }
-
-        .right{
-          display: flex;
+      .row{
+        &.top{
           align-items: center;
-          .info{
-            margin-left: 36px;
-            position: relative;
-            &::before{
-              content: '';
-              width: 1px;
-              height: 80%;
-              background-color: #bebebe;
-              position: absolute;
-              top: 50%;
-              left: -18px;
-              transform: translate(-50%, -50%);
+          &::before{
+            left: 240px;
+          }
+
+          .period{
+            width: 240px;
+            min-width: 240px;
+            padding: 0 36px 0 24px;
+          }
+
+          .row_right{
+            display: flex;
+            align-items: center;
+            .tag{
+              justify-content: flex-end;
             }
           }
-          .tag{
-            justify-content: flex-end;
-          }
         }
-      }
 
-      .bottom{
-        .right{
+        &.bottom{
+          padding: 0 12px 0 276px;
           display: flex;
-          > div{
-            flex: 1;
-            padding-right: 12px;
-          }
         }
       }
     }
@@ -330,35 +311,38 @@ export const CareerDescriptionViewContainer = styled.ul`
       &::before{
         left: 199.5px;
       }
-      .left{
-        width: 200px;
-        min-width: 200px;
-      }
+      .row{
+        &.top{
+          &::before{
+            left: 200px;
+          }
 
-      .top{
-        &::before{
-          left: 200px;
-        }
-        .right{
-          position: relative;
-          .title{
-            margin-bottom: 4px;
-            padding-right: 60px;
-          }
-          .tag{
-            margin-top: 12px;
+          .row_right{
+            .tag{
+              margin-top: 4px;
+            } 
           }
         }
-      }
 
-      .bottom{
-        .right{
-          .list.participation{
-            display: flex;
-            flex-wrap: wrap;
+        &.bottom{
+          .participation{
+            margin: 16px -12px 0;
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 501px) {
+    .period{
+      width: 200px;
+      min-width: 200px;
+      padding: 0 24px;
+      font-size: 15px;
+    }
+
+    .row.bottom{
+      padding: 0 24px 0 236px;
     }
   }
 
@@ -366,36 +350,26 @@ export const CareerDescriptionViewContainer = styled.ul`
   /* mobile */
   @media screen and (min-width: 501px) {
     li.career_item{
-      padding: 24px 0;
-      .right{
+      padding: 30px 0;
+      .row_right{
         padding: 0 24px 0 36px;
       }
 
-      .top{
-        &::before{
-          top: 10.5px;
-        }
-        .left{
-          padding: 0 36px 0 24px;
-          font-size: 13px;
-          text-align: right;
-        }
-        .right{
-          .info{
-            font-size: 13px;
+      .row{
+        &.top{
+          display: flex;
+          &::before{
+            top: 10.5px;
+          }
+
+          .period{
+            text-align: right;
           }
         }
-      }
-      .bottom{
-        .left{
-          padding-right: 18px;
-          button{
-            margin-left: auto;
-          }
-        }
-        .right{
-          .list.participation{
-            margin: 8px -12px 0;
+
+        &.bottom{
+          .participation{
+            font-size: 14px;
           }
         }
       }
@@ -409,39 +383,21 @@ export const CareerDescriptionViewContainer = styled.ul`
         left: 24px;
       }
 
-      .top{
-        display: block;
-        &::before{
-          top: 7px;
-          left: -23.5px;
-        }
-        .left{
-          margin-bottom: 6px;
-          text-align: left;
-          font-size: 12px;
-        }
-        .right{
-          .title{
-            font-size: 15px;
+      .row{
+        &.top{
+          &::before{
+            top: 7px;
+            left: -23.5px;
           }
-          .info{
-            font-size: 12px;
-          }
-        }
-      }
 
-      .bottom{
-        flex-direction: column-reverse;
-        .left{
-          width: 100%;
-          padding-right: 24px;
-          button{
-            margin: 12px auto 0 auto;
+          .period{
+            margin-bottom: 6px;
           }
         }
-        .right{
-          .list.participation{
-            margin: 8px -6px 0;
+
+        &.bottom{
+          .participation{
+            font-size: 12px;
           }
         }
       }
