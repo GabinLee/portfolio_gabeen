@@ -13,8 +13,6 @@ function App() {
         <Route path="/cashbook" element={<CashbookPage />} />
       </Route>
     </Routes>
-
-    // "homepage": "https://gabinlee.github.io/portfolio_gabeen",
   );
 }
 
