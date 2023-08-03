@@ -7,14 +7,15 @@ import CashbookPage from './pages/cashbook';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LayoutPage />}>
-          <Route path="" element={<MainPage />} />
-          <Route path="/cashbook" element={<CashbookPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <MainPage />
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<LayoutPage />}>
+    //       <Route path="" element={<MainPage />} />
+    //       <Route path="/cashbook" element={<CashbookPage />} />
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 
