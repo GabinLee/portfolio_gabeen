@@ -14,7 +14,7 @@ export type CareerDescription = {
 
 export const CareerDescriptionList: CareerDescription[] = [
   {title: 'Cashbook',
-    period: '2022.05 ~ ',
+    period: '2023.05 ~ ',
     info: '용도별 수입, 지출, 저축을 기록하고 관리하는 가계부 서비스',
     tag: ['Web'],
     // img: '',
@@ -38,7 +38,7 @@ export const CareerDescriptionList: CareerDescription[] = [
   //   // link: ''
   // },
   {title: '셀러가드',
-    period: '2022.03 ~ 2022.04',
+    period: '2023.03 ~ 2023.04',
     info: '셀러 안심 서비스 및 관리자 페이지',
     tag: ['Web', 'Mobile'],
     img: 'images/project/sellerguard.png',
