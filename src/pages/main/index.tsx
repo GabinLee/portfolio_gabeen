@@ -1,9 +1,36 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from './style';
 import ProjectView from '../project';
 
 
 export default function MainPage() {
+  const introRef = useRef<HTMLParagraphElement>(null);
+  const [introHeight, setIntroHegiht] = useState(-1);
+  const [lineBreak, setLineBreak] = useState(true);
+
+
+  useEffect(() => {
+    if(introRef.current === null) return;
+
+    const observer = new ResizeObserver((entries, observer) => {
+      for (let entry of entries) {
+        const { height } = entry.contentRect;
+        console.log('height', height);
+        setIntroHegiht(height);
+      }
+    });
+
+    observer.observe(introRef.current);
+  }, []);
+
+  useEffect(() => {
+    if(introHeight > 60) {
+      setLineBreak(false);
+    } else {
+      setLineBreak(true);
+    }
+  }, [introHeight]);
+
 
   return (
     <Container>
@@ -15,8 +42,7 @@ export default function MainPage() {
           <div className="profile txt">
             <div className="introduce">
               <p>안녕하세요!</p>
-              <p>퍼블리셔로 시작하여 개발자로 꾸준한 성장을 꿈꾸는</p>
-              <p>신입 프론트엔드 개발자 <span>이가빈</span>입니다.</p>
+              <p ref={introRef}>퍼블리셔로 시작하여 개발자로 꾸준한 성장을 꿈꾸는 {lineBreak && <br/>}5년차 퍼블리셔, 신입 프론트엔드 개발자 <span>이가빈</span>입니다.</p>
             </div>
             <a href="mailto:leegb0621@gmail.com" className='mail'>leegb0621@gmail.com</a>
             <a href="tel:010-2790-5747" className='tel'>010-2790-5747</a>

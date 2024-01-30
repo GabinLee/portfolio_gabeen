@@ -74,6 +74,7 @@ export const Container = styled.main`
             .introduce{
               padding-bottom: 24px;
               p{
+                max-width: 480px;
                 font-size: 20px;
                 line-height: 1.5;
                 span{
